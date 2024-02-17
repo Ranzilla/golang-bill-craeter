@@ -1,19 +1,34 @@
 package main
 
-import "fmt"
-import "sort"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func getInput(prompt string, r *bufio.Reader) (string, error) {
+	fmt.Print(prompt)
+	input, err := r.ReadString('\n')
+	return strings.TrimSpace(input), err
+}
+
+func promptOptions(b bill) {
+	reader := bufio.NewReader(os.Stdin)
+	opt, _ := getInput("Choose an option: (a) add item | (b) save bill | (t) add tip ", reader)
+	fmt.Println(opt)
+}
+
+func createBill() bill {
+	reader := bufio.NewReader(os.Stdin)
+	name, _ := getInput("Create a new bill name: ", reader)
+	b := newBill(name)
+	fmt.Println("Bill created: ", b.name)
+	return b
+}
 
 func main() {
-
-// slice trough a slice with index + for loop with use of continue or break
-for index, value := range names {
-if index O == 1 {
-fmt.Printf("Continue at index %v\n", index)
-continue
-} else if {
-
-}
-
-}
-
+	myBill := createBill()
+	promptOptions(myBill)
+	//fmt.Println(myBill)
 }
