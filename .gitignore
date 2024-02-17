@@ -21,4 +21,5 @@
 go.work
 
 # Personal
-*.local
+/local
+/local/notes.me
