@@ -1,0 +1,6 @@
+Bill breakdown: 
+Vegetarian Burger:        ...$13.00 
+Fries:                    ...$7.00 
+Beer:                     ...$5.00 
+Tip                       ...$2.00 
+Total:                    ...$27.00 
